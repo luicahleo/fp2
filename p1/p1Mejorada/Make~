@@ -1,0 +1,13 @@
+#
+#   Makefile de ejemplo para la compilación, creación del jar y ejecución
+#
+
+# CLASEPPAL es el nombre de la clase que contiene el metodo principal (main)
+CLASEPPAL=Ejercicio01
+
+JAVAC=javac
+JAVA=java
+JAR=jar
+OPCIONES= -Xlint -encoding ISO-8859-1 -classpath ./bin  -cp ./bin -d ./bin
+
+

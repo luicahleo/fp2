@@ -1,0 +1,43 @@
+#
+#   Makefile de ejemplo para la compilación, creación del jar y ejecución
+#
+
+# CLASEPPAL es el nombre de la clase que contiene el metodo principal (main)
+CLASEPRINCIPAL=Bidimensional
+CLASEMATRIZBIDIMENSIONAL=MatrizBidimensional
+JAVAC=javac
+JAVA=java
+JAR=jar
+OPCIONES= -Xlint -encoding ISO-8859-1 -classpath ./bin  -cp ./bin -d ./bin
+PRINCIPAL=fp2.poo.matrices.Bidimensional
+
+RUTACLASE=fp2/poo/matrices/
+DIRSRC=./src/
+DIRBIN=./bin/
+DIRJAR=./jar/
+
+##########################################
+# Ejecución Bidimensional
+##########################################
+ejecutaJ: $(DIRJAR)$(MatrizBidimensional).jar
+	java -jar $(DIRJAR)$(MatrizBidimensional).jar
+
+###################################
+# Generacion del .jar
+##########################################
+
+$(DIRJAR)$(MatrizBidimensional).jar: $(DIRBIN)$(RUTACLASE)$(CLASEMATRIZBIDIMENSIONAL).class \
+				$(DIRBIN)$(RUTACLASE)$(CLASEPRINCIPAL).class
+	jar cvfe $(DIRJAR)$(MatrizBidimensional).jar $(PRINCIPAL)  -C  $(DIRBIN)  $(RUTACLASE)$(CLASEPRINCIPAL).class \
+								-C  $(DIRBIN)  $(RUTACLASE)$(CLASEMATRIZBIDIMENSIONAL).class
+
+
+
+
+
+##########################################
+# Compilación del fichero Bidimensional.java
+##########################################
+
+$(DIRBIN)$(RUTACLASE)$(CLASEMATRIZBIDIMENSIONAL).class: $(DIRSRC)$(RUTACLASE)$(CLASEMATRIZBIDIMENSIONAL).java
+	javac $(OPCIONES) $(DIRSRC)$(RUTACLASE)$(CLASEMATRIZBIDIMENSIONAL).java

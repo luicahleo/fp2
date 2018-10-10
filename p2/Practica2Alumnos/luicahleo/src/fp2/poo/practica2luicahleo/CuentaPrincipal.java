@@ -23,24 +23,22 @@ public class CuentaPrincipal{
 
 	Cuenta tabla[] = new Cuenta[20];
 	System.out.println("!!!!!!!!!!!!!!!!Tabla creada!!!!!!!!!!!!!!");
-	
-	
 
-	tabla[0].setNombre() = "Luis";
-	tabla[0].setSaldo() = 100;
 
-	tabla[1].setNombre() = "Pedro";
-	tabla[1].setSaldo() = 200;
 
-	tabla[2].setNombre() = "Juan";
-	tabla[2].setSaldo() = 300;
 
-	tabla[3].setNombre() = "Marco";
-	tabla[3].setSaldo() = 400;
 
- 
 	for(int i=0;i<tabla.length;i++){
-}		System.out.println(tabla[i].getNombre() + " " +tabla[i].getSaldo() );
 
-	}
-}
+
+		tabla[i] = new Cuenta("Usuario " + i, i+100);
+
+		System.out.println(tabla[i].getNombre() + " " + tabla[i].getSaldo());
+
+	}//end for
+
+
+
+
+	}//end main
+}//end public class

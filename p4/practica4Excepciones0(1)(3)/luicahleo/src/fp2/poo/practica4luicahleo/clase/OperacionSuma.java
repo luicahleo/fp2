@@ -22,19 +22,18 @@ public class OperacionSuma implements OperacionSumaInterfaz{
 	
 
 
-	//constructor OperacionSuma con dos parametros
-	public OperacionSuma(int valor1, int valor2){
+	//constructor OperacionSuma con dos parametrosValorIncorrectoExcepcion
+	public OperacionSuma(int valor1, int valor2) throws ValorIncorrectoExcepcion{
 		
 		this.valor1 = valor1;
 		this.valor2 = valor2;
-		try{
-			if (this.valor1 > 100 || this.valor1 < 0 || this.valor2 > 100 || this.valor2 < 0){
+		
+		if (this.valor1 > 100 || this.valor1 < 0 || this.valor2 > 100 || this.valor2 < 0){
 				System.out.println("valores erroneos");
-				//throw new ValorIncorrectoExcepcion(e);
+    	                        //ValorIncorrectoExcepcion e = new ValorIncorrectoExcepcion(); 
+                                //throw e;
+                                throw new ValorIncorrectoExcepcion();
 
-			}
-		}catch(ValorIncorrectoExcepcion e){
-			System.out.println(e.toString());
 		}
 	}
 
@@ -43,7 +42,7 @@ public class OperacionSuma implements OperacionSumaInterfaz{
 	public int suma() throws ValorIncorrectoExcepcion{
 
 		if (this.valor1 > 100 || this.valor1 < 0 || this.valor2 > 100 || this.valor2 < 0){
-        		throw new ValorIncorrectoExcepcion(e);
+        		throw new ValorIncorrectoExcepcion();
 		}
         	resultado = valor1 + valor2 ; 
         	return resultado;
@@ -54,7 +53,7 @@ public class OperacionSuma implements OperacionSumaInterfaz{
 		System.out.println("Ejecuta suma() con dos parametros!!!! " );
 		//ponemos los limites de los parametros pasados, es decir valor1 y valor2
 		if (valor1 > 100 || valor1 < 0 || valor2 > 100 || valor2 < 0){
-        		throw new ValorIncorrectoExcepcion(e);
+        		throw new ValorIncorrectoExcepcion();
 			
 		}
         	resultado = valor1 + valor2 ; 
@@ -63,13 +62,13 @@ public class OperacionSuma implements OperacionSumaInterfaz{
 	}
 	public void setValor1(int valor1) throws ValorIncorrectoExcepcion{
 		if(valor1 >100 || valor1 < 0)
-			throw new ValorIncorrectoExcepcion(e);
+			throw new ValorIncorrectoExcepcion();
 		this.valor1 = valor1;
 		
 	}
 	public void setValor2(int valor2) throws ValorIncorrectoExcepcion{
 		if(valor2 >100 || valor2 < 0)
-			throw new ValorIncorrectoExcepcion(e);
+			throw new ValorIncorrectoExcepcion();
 		this.valor2 = valor2;
 	}
 	public int getResultado(){

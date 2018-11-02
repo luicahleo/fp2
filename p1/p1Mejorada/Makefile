@@ -14,10 +14,13 @@ OPCIONES= -Xlint -encoding ISO-8859-1 -classpath ./bin  -cp ./bin -d ./bin
 # Generacion del .jar
 ##########################################
 Ejemplo01.jar: ./bin/fp2/poo/practica1/Ejercicio01.class \
-               ./bin/fp2/poo/practica1/Calculadora.class
+               ./bin/fp2/poo/practica1/Calculadora.class \
+               ./bin/fp2/poo/practica1/CalculadoraExcepcion.class
 	jar cvfe ./jar/Ejercicio01.jar fp2.poo.practica1.Ejercicio01  \
 	                        -C ./bin ./fp2/poo/practica1/Ejercicio01.class \
-	                        -C ./bin ./fp2/poo/practica1/Calculadora.class 
+	                        -C ./bin ./fp2/poo/practica1/Calculadora.class \
+	                        -C ./bin ./fp2/poo/practica1/CalculadoraExcepcion.class 
+
 	java -jar ./jar/Ejercicio01.jar 
               
 ##########################################
@@ -25,6 +28,14 @@ Ejemplo01.jar: ./bin/fp2/poo/practica1/Ejercicio01.class \
 ##########################################
 ejecucion: 
 	java -classpath ./bin:./jar -cp bin fp2.poo.practica1.Ejercicio01
+
+
+##########################################
+# Compilación del fichero CalculadoraExcepcion.java
+##########################################
+./bin/fp2/poo/practica1/CalculadoraExcepcion.class: ./src/fp2/poo/practica1/CalculadoraExcepcion.java
+	$(JAVAC) $(OPCIONES) ./src/fp2/poo/practica1/CalculadoraExcepcion.java
+
 
 ##########################################
 # Compilación del fichero Ejercicio01.java

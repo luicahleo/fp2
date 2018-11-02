@@ -11,7 +11,7 @@
 package fp2.poo.practica1;
 
 import java.lang.*;
-
+import fp2.poo.practica1.CalculadoraExcepcion;
 
 /**
  * Descripcion: Esta una clase es un ejemplo de implementacion y uso  
@@ -25,8 +25,9 @@ public class Calculadora {
 
     /** Atributo privado donde se almacena los resultados obtenidos. */
     private int memoria ;
-
-    /**
+    private boolean flagA = false;
+    private boolean flagB = false;    
+/**
      *  Constructor de la clase Calculadora.
      *
      *  Parametros: No hay par metros.
@@ -40,9 +41,16 @@ public class Calculadora {
      *               proporcionados.
      *
      */
-    public int suma( int param1 , int param2 ) {
+    public int suma( int param1 , int param2 ) throws CalculadoraExcepcion{
         int resultado = 0; // Almacena el resultado de la suma .
- 
+
+        System.out.println("Ejecuta suma()!!!! " );
+	//ponemos los limites de los parametros pasados, es decir param1 y param2
+	if (param1 >= 100 || param1 <= 0 || param2 >= 100 || param2 <= 0){
+        	throw new CalculadoraExcepcion(param1);
+		//System.out.println("Finalizacion normal...." );	
+		//return a;
+	}
         resultado = param1 + param2 ; 
         this.memoria = resultado ;   /* Se almacena en memoria.*/
         return resultado ;

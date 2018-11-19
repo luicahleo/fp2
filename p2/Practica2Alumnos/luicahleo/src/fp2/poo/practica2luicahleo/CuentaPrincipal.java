@@ -1,6 +1,5 @@
-/*
- *  Fichero: CuentaPrincipal.java
- *
+	/*.O\
+7+9
  *  Fundamentos de Programacion II. GITT.
  *  Departamento de Ingenieria Telematica
  *  Universidad de Sevilla
@@ -31,7 +30,7 @@ public class CuentaPrincipal{
 	for(int i=0;i<tabla.length;i++){
 
 
-		tabla[i] = new Cuenta("Usuario " + i, i+100);
+		tabla[i] = new Cuenta("luis" + i, i+100);
 
 		System.out.println(tabla[i].getNombre() + " " + tabla[i].getSaldo());
 
@@ -42,3 +41,4 @@ public class CuentaPrincipal{
 
 	}//end main
 }//end public class
+

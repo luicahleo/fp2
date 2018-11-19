@@ -1,0 +1,50 @@
+##################################################################################
+#   Makefile para la practica 5. Primera Parte. 
+#   Encapsulacion
+##################################################################################
+##################################################################################
+#    Prueba01
+##################################################################################
+
+compilaJava01: 
+	javac -encoding ISO-8859-1 -g -Xlint -classpath ./bin/ -d ./bin/  ./src/fp2/poo/practica5/p1/ClaseBase.java
+	javac -encoding ISO-8859-1 -g -Xlint -classpath ./bin/ -d ./bin/  ./src/fp2/poo/practica5/p1/Main.java
+
+ejecuta01: 
+	java -classpath ./bin fp2.poo.practica5.p1.Main
+
+##################################################################################
+#    Prueba02
+##################################################################################
+
+compilaJava02: 
+	javac -encoding ISO-8859-1 -g -Xlint -classpath ./bin/ -d ./bin/  ./src/fp2/poo/practica5/p1/ClaseBase.java
+	javac -encoding ISO-8859-1 -g -Xlint -classpath ./bin/ -d ./bin/  ./src/fp2/poo/practica5/p1/ClaseDerivadaMismoPaquete.java
+	javac -encoding ISO-8859-1 -g -Xlint -classpath ./bin/ -d ./bin/  ./src/fp2/poo/practica5/p1/Main.java
+
+ejecuta02: 
+	java -classpath ./bin fp2.poo.practica5.p1.Main
+
+##################################################################################
+#    Prueba03
+##################################################################################
+
+compilaJava03: 
+	javac -encoding ISO-8859-1 -g -Xlint -classpath ./bin/ -d ./bin/  ./src/fp2/poo/practica5/p1/ClaseBase.java
+	javac -encoding ISO-8859-1 -g -Xlint -classpath ./bin/ -d ./bin/  ./src/fp2/poo/practica5/p2/ClaseSinHerenciaEnOtroPaquete.java
+	javac -encoding ISO-8859-1 -g -Xlint -classpath ./bin/ -d ./bin/  ./src/fp2/poo/practica5/p2/Main.java
+
+ejecuta03: 
+	java -classpath ./bin fp2.poo.practica5.p2.Main
+
+##################################################################################
+#    Prueba04
+##################################################################################
+
+compilaJava04: 
+	javac -encoding ISO-8859-1 -g -Xlint -classpath ./bin/ -d ./bin/  ./src/fp2/poo/practica5/p1/ClaseBase.java
+	javac -encoding ISO-8859-1 -g -Xlint -classpath ./bin/ -d ./bin/  ./src/fp2/poo/practica5/p2/ClaseConHerenciaEnOtroPaquete.java
+	javac -encoding ISO-8859-1 -g -Xlint -classpath ./bin/ -d ./bin/  ./src/fp2/poo/practica5/p2/Main.java
+
+ejecuta04: 
+	java -classpath ./bin fp2.poo.practica5.p2.Main

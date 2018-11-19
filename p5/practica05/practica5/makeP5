@@ -1,0 +1,56 @@
+##################################################################################
+#   Makefile para la practica 5: 
+#   String y envolventes a los tipos de datos simples
+##################################################################################
+
+##################################################################################
+#   
+##################################################################################
+
+compilaJava: 
+	javac -encoding ISO-8859-1 -g -Xlint -classpath ./bin/ -d ./bin/  ./src/fp2/poo/practica5/Practica5Ejercicio01.java
+	javac -encoding ISO-8859-1 -g -Xlint -classpath ./bin/ -d ./bin/  ./src/fp2/poo/practica5/Practica5Ejercicio02.java
+	javac -encoding ISO-8859-1 -g -Xlint -classpath ./bin/ -d ./bin/  ./src/fp2/poo/practica5/Practica5Ejercicio03.java
+	javac -encoding ISO-8859-1 -g -Xlint -classpath ./bin/ -d ./bin/  ./src/fp2/poo/practica5/Practica5Ejercicio04.java
+	javac -encoding ISO-8859-1 -g -Xlint -classpath ./bin/ -d ./bin/  ./src/fp2/poo/practica5/Practica5Ejercicio05.java
+	javac -encoding ISO-8859-1 -g -Xlint -classpath ./bin/ -d ./bin/  ./src/fp2/poo/practica5/Practica5Ejercicio06.java
+	javac -encoding ISO-8859-1 -g -Xlint -classpath ./bin/ -d ./bin/  ./src/fp2/poo/practica5/Practica5Ejercicio07.java
+	javac -encoding ISO-8859-1 -g -Xlint -classpath ./bin/ -d ./bin/  ./src/fp2/poo/practica5/Practica5Ejercicio08.java
+	javac -encoding ISO-8859-1 -g -Xlint -classpath ./bin/ -d ./bin/  ./src/fp2/poo/practica5/Practica5Ejercicio09.java
+	javac -encoding ISO-8859-1 -g -Xlint -classpath ./bin/ -d ./bin/  ./src/fp2/poo/practica5/Practica5Ejercicio10.java
+
+
+
+##################################################################################
+#    
+##################################################################################
+ejecuta01: 
+	java -classpath ./bin fp2.poo.practica5.Practica5Ejercicio01
+
+ejecuta02: 
+	java -classpath ./bin fp2.poo.practica5.Practica5Ejercicio02
+	
+ejecuta03: 
+	java -classpath ./bin fp2.poo.practica5.Practica5Ejercicio03
+
+ejecuta04: 
+	java -classpath ./bin fp2.poo.practica5.Practica5Ejercicio04
+
+ejecuta05: 
+	java -classpath ./bin fp2.poo.practica5.Practica5Ejercicio05
+		
+ejecuta06: 
+	java -classpath ./bin fp2.poo.practica5.Practica5Ejercicio06 
+	
+ejecuta07: 
+	java -classpath ./bin fp2.poo.practica5.Practica5Ejercicio07 
+	
+ejecuta08: 
+	java -classpath ./bin fp2.poo.practica5.Practica5Ejercicio08
+
+ejecuta09: 
+	java -classpath ./bin fp2.poo.practica5.Practica5Ejercicio09 
+		
+ejecuta10: 
+	java -classpath ./bin fp2.poo.practica5.Practica5Ejercicio10
+
